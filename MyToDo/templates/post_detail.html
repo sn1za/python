@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+
+
+{% block body %}
+<h1 style="text-align: center;">{{ article.title }}</h1>
+
+<div style="text-align: center;">
+    <p>{{ article.text }}</p>
+    <p><b>Date: {{ article.date.date() }}</b></p>
+    <a href="/posts/{{ article.id }}/delete">Delete</a>
+    <a href="/posts/{{ article.id }}/update">Update</a>
+    <hr>
+</div>
+
+{% endblock %}
